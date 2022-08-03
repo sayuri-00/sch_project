@@ -1,0 +1,136 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family:'poppins', sans-serif;
+    overflow-x: hidden;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient( 
+        rgba(4,9,30,0.7),
+        rgba(3,9,30,.7)),url(images/banner.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2px 6px;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+    padding-top: 35px;
+   
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 2px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'poppins' sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+.nav-links ul li::after{
+    content: ' ';
+    width: 0%;
+    background: lightpink;
+    display: block;
+    margin: auto;
+    height: 2px;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    border: 1px white;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 57px;
+    font-family: 'poppins' sans-serif;
+}
+.text-box h1 span{
+    color: lightcoral;
+    
+}
+.text-box p{
+    padding: 20px 0px 30px;
+    font-size: 18px;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: transparent;
+    border: 1px solid lightpink;
+    padding: 12px 34px;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'poppins' sans-serif;
+    font-weight: bold;
+}
+
+.hero-btn:hover{
+    color:black;
+    background-color: aliceblue;
+}
+nav .fa{
+    text-decoration: none;
+    color: white;
+    font-size: 0;
+}
+/* Media Query for mobile */
+@media(max-width:700px){
+    .text-box h1{
+        font-size: 20px;
+       
+    }
+    .text-box p{
+        font-size: 14px;
+    }
+    .nav-links ul li{
+        display: block;
+        padding: 20% 4px 0;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+    .nav-links{
+        position: absolute;
+        background: #d1928e;
+        height: 100vh;
+        width: 200px;
+        top: 0%;
+        right: 0%;
+        z-index: 2;
+        text-align: left;
+    }
+    nav .fa{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 23px;
+        cursor: pointer;
+    }
+}
